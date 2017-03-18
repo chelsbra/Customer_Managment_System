@@ -1,0 +1,13 @@
+.customer
+	h2 = customer.name
+	p = image_tag customer.image, height:'200', width:'150'
+	p 
+		strong> Phone: 
+		= customer.phone_number
+	p 
+		strong> Email: 
+		= customer.email_address	
+	p 
+		strong> Notes: 
+		= customer.notes
+	p = link_to 'details', customer
