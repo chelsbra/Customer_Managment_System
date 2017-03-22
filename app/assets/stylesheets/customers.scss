@@ -5,6 +5,11 @@
 body {
 	background: #D3D3D3;
 
+	#wrapper {
+		width: 1200px;
+		margin: 0px auto;
+	}
+
 	h1 {
 		color: #4d4d4d;
 		padding: 10px;
@@ -12,7 +17,7 @@ body {
 
 	ul {
 		list--style-type: none;
-		display: inline;
+		display: block;
 
 		li {
 			display: inline;
@@ -21,22 +26,18 @@ body {
 	
 }
 
-.cust {
-	display: inline;
-
-	li {
-		display: inline;
-		border-style: outset;
-		border-color: #4d4d4d;
-	}
-}
 
 .customer {
+	width: 350px;
+	border: 1px outset #111;
+	display: inline-block;
 	background: white;
+	margin: 10px;
+	padding: 10px;
 	
 
 	h2 {
 		color: #4d4d4d;
-	}		
+	}	
 	
 }

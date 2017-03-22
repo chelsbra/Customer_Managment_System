@@ -1,2 +1,6 @@
-h1 Finder#alphabetized
-p Find me in app/views/finder/alphabetized.html.slim
+h1 Alphabetized Customers
+ul
+	li = link_to 'New Customer '
+	li = link_to '- Missing Emails', missing_email
+ul.cust
+	li = render partial: 'customer', collection: @customersA

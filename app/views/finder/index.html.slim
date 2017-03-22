@@ -1,2 +1,7 @@
-h1 Finder#index
-p Find me in app/views/finder/index.html.slim
+#wrapper
+	h1 All Customers
+	ul
+		li = link_to 'New Customer '
+		li = link_to '- Missing Emails'
+		
+	= render partial: 'customer', collection: @customers

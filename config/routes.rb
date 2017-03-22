@@ -1,22 +1,18 @@
 Rails.application.routes.draw do
-  get 'finder/index'
-
-  get 'finder/alphabetized'
-
-  get 'finder/missing_email'
 
 	devise_for :admin_users, ActiveAdmin::Devise.config
 	ActiveAdmin.routes(self)
-  # get 'customers/index'
 
-  # get 'customers/show'
+  resources 'finder', only: [:index, :alphabetized, :missing_email]
 
-  resources 'customers', only: [:index, :show]
-
+  # resources :finder do
+  #   member do
+  #     get ''
+  #   end
+  # end
+  get 'customer/missing_email' => 'finder#missing_email'
   #load cust page
-  root to: 'customers#index'
-
-  # devise_for :admin_users, ActiveAdmin::Devise.config
-  # ActiveAdmin.routes(self)
+  root to: 'finder#index'
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

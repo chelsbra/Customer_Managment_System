@@ -1,2 +1,6 @@
-h1 Finder#missing_email
-p Find me in app/views/finder/missing_email.html.slim
+h1 Customers Missing Emails
+ul
+	li = link_to 'New Customer '
+	li = link_to ' Missing Emails', customer_missing_email_path
+ul.cust
+	li = render partial: 'customer', collection: @missing_email

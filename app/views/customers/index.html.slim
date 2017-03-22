@@ -3,6 +3,4 @@ ul
 	li = link_to 'New Customer '
 	li = link_to '- Missing Emails'
 
-
-ul.cust
-	li = render partial: 'customer', collection: @customers
+	= render partial: 'customer', collection: @customers
