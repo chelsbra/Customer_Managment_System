@@ -5,11 +5,6 @@ Rails.application.routes.draw do
 
   resources 'finder', only: [:index, :alphabetized, :missing_email]
 
-  # resources :finder do
-  #   member do
-  #     get ''
-  #   end
-  # end
   get 'customer/missing_email' => 'finder#missing_email'
   #load cust page
   root to: 'finder#index'
